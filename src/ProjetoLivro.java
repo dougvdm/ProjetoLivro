@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class ProjetoLivro {
     public static void main(String[] args) throws Exception {
+        // começando a história
         System.out.println("A história de Deco\n\n");
         escolher();
         
