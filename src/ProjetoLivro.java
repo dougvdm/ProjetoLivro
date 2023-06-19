@@ -8,7 +8,7 @@ public class ProjetoLivro {
     }
 
     private static void escolher() {
-        Scanner input = new Scanner(System.in); 
+        Scanner escaneador = new Scanner(System.in); 
         System.out.println(
        "Deco, também conhecido como o último romantico do mundo é um rapaz que está" + 
        "\nterrivelmente apaixonado por sua amiga de infância chamada Laura, porém pela infelicidade dele," + 
@@ -18,7 +18,7 @@ public class ProjetoLivro {
         System.out.println("\nse declarar");
         System.out.println("nao se declarar\n");
 
-        String escolha = input.nextLine();
+        String escolha = escaneador.nextLine();
         
         if(escolha.equalsIgnoreCase("se declarar")){
             System.out.println("JP acaba descobrindo das segundas intenções de Deco e "+
@@ -33,10 +33,10 @@ public class ProjetoLivro {
             System.out.println("resposta incorreta, tente novamente\n\n");
               escolher();
         }    
-         input.close();
+         escaneador.close();
     }   
     private static void naodeclarou() {
-        Scanner input = new Scanner(System.in);
+        Scanner escaneador = new Scanner(System.in);
         System.out.println(
     "\nDeco decidiu não se declarar para Laura, ele decidiu viver sua vida"+
     "\nentrou para a academia e até tentou parar de ser frangote, mas infelizmente sem sucesso."+
@@ -48,7 +48,7 @@ public class ProjetoLivro {
         System.out.println("\ndepois de 3 meses ficando deco deve pedir ela em namoro? ");
         System.out.println("\npedir");
         System.out.println("nao pedir");
-        String escolha = input.nextLine();
+        String escolha = escaneador.nextLine();
         if(escolha.equalsIgnoreCase("pedir")){
             System.out.println("\nDeco decide pedir camilinha em namoro porém, já passou muito tempo"
      +"\ne ela já está pensando em conhecer novas pessoas e acaba recusando seu pedido."+
@@ -68,6 +68,6 @@ public class ProjetoLivro {
             naodeclarou();
         }
              
-         input.close();
+         escaneador.close();
     }
 }
