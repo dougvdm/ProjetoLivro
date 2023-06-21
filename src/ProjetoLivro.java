@@ -68,11 +68,11 @@ public class ProjetoLivro {
         System.out.println(esc2cap3);
 
         String escolha = escaneador.nextLine();
-        if(escolha.equalsIgnoreCase("pedir")){
+        if(escolha.equalsIgnoreCase(esc1cap3)){
             System.out.println(cap4);
              System.out.println("\nFIM");
         }
-        else if(escolha.equalsIgnoreCase("nao pedir")){
+        else if(escolha.equalsIgnoreCase(esc2cap3)){
             System.out.println(cap5);
            System.out.println("\nFIM");
         }
