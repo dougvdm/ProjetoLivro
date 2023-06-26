@@ -1,25 +1,19 @@
 public class Personagem {
     String nome;
-    int depressao;
+    int felicidade;
     
     
-   public Personagem(String nome, int depressao){
+   public Personagem(String nome, int felicidade){
     this.nome = nome;
-    this.depressao = depressao;
+    this.felicidade = felicidade;
    }
   
    public String pegarNome(){
      return nome;
    }
   
-   public int pegarDepressao(){
-     return depressao;
+   public int pegarFelicidade(){
+     return felicidade;
    }
-  
-   public void attDepressao(int depressao){
-    this.depressao = depressao;
-   }
-
-
     
 }
