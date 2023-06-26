@@ -3,13 +3,16 @@ import java.util.Scanner;
 public class ProjetoLivro {
     public static void main(String[] args) throws Exception { 
         // começando a história
-        System.out.println("A história de Deco\n\n");
+        System.out.println("A história de Deco\n");
+        String linha = "----------------------------------------------------------------------";
+        System.out.println(linha);
         escolher();
+
     }
 
     private static void escolher() {
         String linha = "----------------------------------------------------------------------";
-        Personagem personagem1 = new Personagem("Deco", 20);
+        Personagem deco = new Personagem("Deco", 20);
        
         String cap1 ="Capitulo 1\n"+
        "Deco, também conhecido como o último romantico do mundo é um rapaz que está" + 
@@ -24,8 +27,8 @@ public class ProjetoLivro {
         + "\ne depois ele desceu o cacete em deco, coitado";
 
         Scanner escaneador = new Scanner(System.in); 
-        System.out.println("Personagem: " + personagem1.pegarNome());
-        System.out.println("Felicidade: " + personagem1.pegarFelicidade());
+        System.out.println("Personagem: " + deco.pegarNome());
+        System.out.println("Felicidade: " + deco.pegarFelicidade());
         System.out.println();
         System.out.println(cap1);
 
@@ -44,9 +47,10 @@ public class ProjetoLivro {
         }
         else if(escolha.equalsIgnoreCase(esc2cap1)){
                 System.out.println();
+                System.out.println(linha);
                 System.out.println("Deco perde felicidade por não tomar atitude");
                 System.out.println("felicidade de Deco -10");
-                System.out.println(linha);
+
                  naodeclarou();
         }
         else{
@@ -58,8 +62,8 @@ public class ProjetoLivro {
     }   
     private static void naodeclarou() {
         String linha = "----------------------------------------------------------------------";
-        Personagem personagem1 = new Personagem("Deco", 10);
-        Personagem personagem2 = new Personagem("Camilinha", 20);
+        Personagem deco = new Personagem("Deco", 10);
+        Personagem camilinha = new Personagem("Camilinha", 20);
 
         Scanner escaneador = new Scanner(System.in);
         String cap3 = (
@@ -82,11 +86,11 @@ public class ProjetoLivro {
         "\nrestando assim apenas a sua humilde academia pra vê se deixa de ser frango";
 
         System.out.println("Capítulo 3");
-        System.out.println("Personagem: "+ personagem1.pegarNome()+
-        "\nFelicidade: "+ personagem1.pegarFelicidade());
+        System.out.println("Personagem: "+ deco.pegarNome()+
+        "\nFelicidade: "+ deco.pegarFelicidade());
         System.out.println();
-        System.out.println("Personagem: "+ personagem2.pegarNome()+
-        "\nFelicidade: "+ personagem2.pegarFelicidade() );
+        System.out.println("Personagem: "+ camilinha.pegarNome()+
+        "\nFelicidade: "+ camilinha.pegarFelicidade() );
         System.out.println();
 
         System.out.println(cap3);
@@ -98,11 +102,11 @@ public class ProjetoLivro {
         if(escolha.equalsIgnoreCase(esc1cap3)){
             System.out.println(linha);
             System.out.println("Capítulo 4");
-            System.out.println("Personagem: "+personagem1.pegarNome()+
-            "\nFelicidade: "+ personagem1.pegarFelicidade());
+            System.out.println("Personagem: "+deco.pegarNome()+
+            "\nFelicidade: "+ deco.pegarFelicidade());
             System.out.println();
-            System.out.println("Personagem: "+personagem2.pegarNome()+
-            "\nFelicidade: "+personagem2.pegarFelicidade());
+            System.out.println("Personagem: "+camilinha.pegarNome()+
+            "\nFelicidade: "+camilinha.pegarFelicidade());
             System.out.println();
 
             System.out.println(cap4);
@@ -115,11 +119,11 @@ public class ProjetoLivro {
         else if(escolha.equalsIgnoreCase(esc2cap3)){
             System.out.println(linha);
             System.out.println("Capítulo 5");
-             System.out.println("Personagem: "+personagem1.pegarNome()+
-            "\nFelicidade: "+ personagem1.pegarFelicidade());
+             System.out.println("Personagem: "+deco.pegarNome()+
+            "\nFelicidade: "+ deco.pegarFelicidade());
             System.out.println();
-            System.out.println("Personagem: "+personagem2.pegarNome()+
-            "\nFelicidade: "+personagem2.pegarFelicidade());
+            System.out.println("Personagem: "+camilinha.pegarNome()+
+            "\nFelicidade: "+camilinha.pegarFelicidade());
             System.out.println();
             System.out.println(cap5);
             System.out.println("\nFIM");
