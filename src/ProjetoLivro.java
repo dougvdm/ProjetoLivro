@@ -4,6 +4,7 @@ public class ProjetoLivro {
     public static void main(String[] args) throws Exception { 
         Personagem deco = new Personagem("Deco", 50);
         Personagem camilinha = new Personagem("Camilinha", 50);
+        boolean feliz = true;
 
         String linha = "-----------------------------------------------------------------------------------";
 
@@ -53,7 +54,7 @@ public class ProjetoLivro {
         System.out.println();
 
         int contador = 0;
-        while(contador ==0){
+        while(contador ==0 && feliz == true ){
             System.out.println(esc1cap1);
             System.out.println(esc2cap1);
 
