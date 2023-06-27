@@ -47,6 +47,8 @@ public class ProjetoLivro {
 
 
         Scanner escaneador = new Scanner(System.in);
+        deco.mudaFelicidade(-10);
+        System.out.println();
         System.out.println(cap1);
         System.out.println();
 
@@ -60,11 +62,16 @@ public class ProjetoLivro {
             if(escolha1.equalsIgnoreCase(esc1cap1)){
                 System.out.println(linha);
                 System.out.println(cap2);
+                System.out.println();
+                deco.mudaFelicidade(-40);
                 contador++;
             }
             else if(escolha1.equalsIgnoreCase(esc2cap1)){
                 System.out.println(linha);
                 System.out.println(cap3);
+                System.out.println();
+                deco.mudaFelicidade(+10);
+                camilinha.mudaFelicidade(-10);
                 int contador2 = 0;
                 while(contador2 == 0){
                     System.out.println();
@@ -75,22 +82,32 @@ public class ProjetoLivro {
                     if(escolha2.equalsIgnoreCase(esc1cap3)){
                         System.out.println(linha);
                         System.out.println(cap4);
+                        System.out.println();
+                        camilinha.mudaFelicidade(10);
+                        System.out.println();
+                        deco.mudaFelicidade(-30);
                         contador++;
                         contador2++;
                     }
                     else if(escolha2.equalsIgnoreCase(esc2cap3)){
                         System.out.println(linha);
                         System.out.println(cap5);
+                        System.out.println();
+                        deco.mudaFelicidade(-20);
                         contador++;
                         contador2++;
                     }
                     else{
                         System.out.println("resposta incorreta, tente novamente! ");
                     }
-
+                    
                 }
-
+            
             }
+
+                    else{
+                    System.out.println("resposta incorreta, tente novamente! ");
+                        }
         }
 
         escaneador.close();

@@ -12,14 +12,16 @@ public class Personagem {
       boolean feliz = true;
       this.felicidade += mudanca;
 
-      if(felicidade < 0){
+      if(felicidade <= 0){
         this.felicidade = 0;
         feliz = false;
+        System.out.println("sua nova felicidade é: "+ this.felicidade);
         System.out.println(this.nome + " morreu de tristeza");
         return feliz;
       }
       else if(felicidade > 50){
         this.felicidade = 50;
+        System.out.println("sua nova felicidade é: "+ this.felicidade);
         System.out.println(this.nome+ " está extremamente feliz!");
         return feliz;
       }
