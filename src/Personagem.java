@@ -18,8 +18,8 @@ public class Personagem {
         System.out.println(this.nome + " morreu de tristeza");
         return feliz;
       }
-      else if(felicidade > 20){
-        this.felicidade = 20;
+      else if(felicidade > 50){
+        this.felicidade = 50;
         System.out.println(this.nome+ " está extremamente feliz!");
         return feliz;
       }
