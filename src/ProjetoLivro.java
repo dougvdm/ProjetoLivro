@@ -6,15 +6,15 @@ public class ProjetoLivro {
         Personagem camilinha = new Personagem("Camilinha", 50);
         boolean feliz = true;
 
-        String linha = "-----------------------------------------------------------------------------------";
+        
 
         // começando a história
         String cap1 ="Capitulo 1\n"+
        "Deco, também conhecido como o último romantico do mundo é um rapaz que está" + 
        "\nterrivelmente apaixonado por sua amiga de infância chamada Laura, porém pela infelicidade dele," + 
-       "\nela já está comprometida com João Pedro, vulgo JP, que é seu atual namorado";
+       "\nela já está comprometida com João Pedro, vulgo JP, que é seu atual namorado, o que ele deve fazer? \n";
        String esc1cap1 = "se declarar";
-       String esc2cap1 = "nao se declarar";
+       String esc2cap1 = "nao se declarar\n";
 
         //esc1cap1
        String cap2 = "capitulo 2\n\n"+
@@ -29,9 +29,9 @@ public class ProjetoLivro {
         "\naté que um belo dia ele conheceu Camilinha, Uma menina meiga do seu cursinho"+
         "\nela bateu o olho em deco e se apaixonou pelo magrelo, paixão a primeira vista."+
         "\nDeco, todo bestinha do jeito que é, ficou enrolando pra ter alguma iniciativa com camilinha"+
-        "\nporém, depois de umas 2 semanas ele teve iniciativa pra ficar com ela");
+        "\nporém, depois de umas 2 semanas ele teve iniciativa pra ficar com ela, o que ele deve fazer? \n");
         String esc1cap3 = "pedir";
-        String esc2cap3 = "nao pedir";
+        String esc2cap3 = "nao pedir\n";
 
 
         //esc1cap3
@@ -47,77 +47,62 @@ public class ProjetoLivro {
         "\nrestando assim apenas a sua humilde academia pra vê se deixa de ser frango";
 
         String pedir = "pedir";
-        String naopedir ="não pedir";
+        String naopedir ="nao pedir";
         String declarar = "se declarar";
-        String naodeclarar = "não se declarar";
-        Capitulo capitulo1()
+        String naodeclarar = "nao se declarar";
+        Capitulo capitulo1 = new Capitulo(cap1, esc1cap1,esc2cap1, deco, -10);
+        Capitulo final1 = new Capitulo(cap2,"", "", deco, -40 );
+        Capitulo capitulo2 = new Capitulo(cap3, esc1cap3, esc2cap3, deco, +10 );
+        Capitulo final2 = new Capitulo(cap4, "" , "" ,deco, -30 );
+        Capitulo final3 = new Capitulo(cap5, "", "", deco, -20 );
 
 
         Scanner escaneador = new Scanner(System.in);
-        deco.mudaFelicidade(-10);
-        System.out.println();
-        System.out.println(cap1);
-        System.out.println();
+        capitulo1.mostrar(cap1,esc1cap1,esc2cap1,deco , -10); 
+
 
         int contador = 0;
         while(contador ==0 && feliz == true ){
-            System.out.println(esc1cap1);
-            System.out.println(esc2cap1);
+        int esc1 = capitulo1.escolher(declarar, naodeclarar);
 
-            String escolha1 = escaneador.nextLine();
-            
-            if(escolha1.equalsIgnoreCase(esc1cap1)){
-                System.out.println(linha);
-                System.out.println(cap2);
-                System.out.println();
-                deco.mudaFelicidade(-40);
+            if (esc1 == 1){
+                final1.mostrar(cap2, "", "", deco, -40);
                 contador++;
             }
-            else if(escolha1.equalsIgnoreCase(esc2cap1)){
-                System.out.println(linha);
-                System.out.println(cap3);
-                System.out.println();
-                deco.mudaFelicidade(+10);
-                camilinha.mudaFelicidade(-10);
+            
+            else if (esc1 == 2){
+                capitulo2.mostrar(cap3,esc1cap3, esc2cap3,deco ,+10 );
                 int contador2 = 0;
-                while(contador2 == 0){
-                    System.out.println();
-                    System.out.println(esc1cap3);
-                    System.out.println(esc2cap3);
-                    
-                    String escolha2 = escaneador.nextLine();
-                    if(escolha2.equalsIgnoreCase(esc1cap3)){
-                        System.out.println(linha);
-                        System.out.println(cap4);
-                        System.out.println();
-                        camilinha.mudaFelicidade(10);
-                        System.out.println();
-                        deco.mudaFelicidade(-30);
+
+                while (contador2 == 0 && feliz == true){
+                    int esc2 = capitulo2.escolher(pedir,naopedir);
+                    if (esc2 ==1 ){
+                        final2.mostrar(cap4, "", "", deco, -30);
                         contador++;
                         contador2++;
                     }
-                    else if(escolha2.equalsIgnoreCase(esc2cap3)){
-                        System.out.println(linha);
-                        System.out.println(cap5);
-                        System.out.println();
-                        deco.mudaFelicidade(-20);
+                    else if(esc2 == 2){
+                        final3.mostrar(cap5,"","",deco, -20);
                         contador++;
                         contador2++;
                     }
                     else{
-                        System.out.println("resposta incorreta, tente novamente! ");
+                        System.out.println("ERROR, tente novamente");
                     }
-                    
+
                 }
-            
+            }
+            else{
+                System.out.println("ERRO, tente novamente");
+                
             }
 
-                    else{
-                    System.out.println("resposta incorreta, tente novamente! ");
-                        }
-        }
+            
+            
 
+
+          
+        }   
         escaneador.close();
-
- }   
+}
 }
