@@ -46,6 +46,12 @@ public class ProjetoLivro {
         "Deco decide não pedir camilinha em namoro"+
         "\nrestando assim apenas a sua humilde academia pra vê se deixa de ser frango";
 
+        String pedir = "pedir";
+        String naopedir ="não pedir";
+        String declarar = "se declarar";
+        String naodeclarar = "não se declarar";
+        Capitulo capitulo1()
+
 
         Scanner escaneador = new Scanner(System.in);
         deco.mudaFelicidade(-10);
