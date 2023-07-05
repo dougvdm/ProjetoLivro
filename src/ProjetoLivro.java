@@ -51,10 +51,10 @@ public class ProjetoLivro {
         String declarar = "se declarar";
         String naodeclarar = "nao se declarar";
         Capitulo capitulo1 = new Capitulo(cap1, esc1cap1,esc2cap1, deco, -10);
-        Capitulo final1 = new Capitulo(cap2,"", "", deco, -40 );
-        Capitulo capitulo2 = new Capitulo(cap3, esc1cap3, esc2cap3, deco, +10 );
-        Capitulo final2 = new Capitulo(cap4, "" , "" ,deco, -30 );
-        Capitulo final3 = new Capitulo(cap5, "", "", deco, -20 );
+        Capitulo capitulo2 = new Capitulo(cap2,"", "", deco, -40 );
+        Capitulo capitulo3 = new Capitulo(cap3, esc1cap3, esc2cap3, deco, +10 );
+        Capitulo capitulo4 = new Capitulo(cap4, "" , "" ,deco, -30 );
+        Capitulo capitulo5 = new Capitulo(cap5, "", "", camilinha, -20 );
 
 
         Scanner escaneador = new Scanner(System.in);
@@ -65,24 +65,27 @@ public class ProjetoLivro {
         while(contador ==0 && feliz == true ){
         int esc1 = capitulo1.escolher(declarar, naodeclarar);
 
+            //primeiro final
             if (esc1 == 1){
-                final1.mostrar(cap2, "", "", deco, -40);
+                capitulo2.mostrar(cap2, "", "", deco, -40);
                 contador++;
             }
             
             else if (esc1 == 2){
-                capitulo2.mostrar(cap3,esc1cap3, esc2cap3,deco ,+10 );
+                capitulo3.mostrar(cap3,esc1cap3, esc2cap3,deco ,+10 );
                 int contador2 = 0;
 
                 while (contador2 == 0 && feliz == true){
-                    int esc2 = capitulo2.escolher(pedir,naopedir);
+                    int esc2 = capitulo3.escolher(pedir,naopedir);
+                    //segundo final
                     if (esc2 ==1 ){
-                        final2.mostrar(cap4, "", "", deco, -30);
+                        capitulo4.mostrar(cap4, "", "", deco, -30);
                         contador++;
                         contador2++;
                     }
+                    //terceiro final
                     else if(esc2 == 2){
-                        final3.mostrar(cap5,"","",deco, -20);
+                        capitulo5.mostrar(cap5,"","",deco, -20);
                         contador++;
                         contador2++;
                     }
