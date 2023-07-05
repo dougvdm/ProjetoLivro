@@ -21,7 +21,7 @@ public class Capitulo {
         System.out.println( this.texto);
         System.out.println( this.escolha1);
         System.out.println( this.escolha2);
-        personagem.mudaFelicidade(mudaFelicidade);
+        personagem.mudaFelicidade(this.mudaFelicidade);
         
        }
 
