@@ -4,41 +4,51 @@ import java.util.Scanner;
 public class Capitulo {
     Scanner escaneador = new Scanner(System.in);
     String texto;
-    String escolha1;
-    String escolha2;
+    String[] escolhas;
     Personagem personagem;
-    int mudaFelicidade;
+    int qtdfeliz;
 
-    public Capitulo(String texto, String escolha1, String escolha2, Personagem personagem, int mudaFelicidade){
+
+    public Capitulo(String texto, String[] escolhas, Personagem personagem, int qtdfeliz){
         this.texto = texto;
-        this.escolha1 = escolha1;
-        this.escolha2 = escolha2;
+        this.escolhas = escolhas;
         this.personagem = personagem;
-        this.mudaFelicidade = mudaFelicidade;
+        this.qtdfeliz = qtdfeliz;
     }
 
-    void mostrar(String texto, String escolha1,String escolha2, Personagem personagem ,  int mudaFelicidade){ 
-        System.out.println( this.texto);
-        System.out.println( this.escolha1);
-        System.out.println( this.escolha2);
-        personagem.mudaFelicidade(this.mudaFelicidade);
+    void mostrar(String texto, String[] escolhas, Personagem personagem ,  int qtdfeliz){ 
+        System.out.println(this.texto);
+        if(escolhas != null){
+            for(String str : escolhas ){
+                System.out.println(str);
+            
+            }  
+        }
+        if(qtdfeliz != 0){
+            this.personagem.mudaFelicidade(qtdfeliz);
+        }
+
+
         
        }
 
-    int escolher(String resposta1, String resposta2){
-        String escolha;
-        escolha = escaneador.nextLine();
-        if (escolha.equalsIgnoreCase(resposta1)){
-            return 1;
-        }
-        else if (escolha.equalsIgnoreCase(resposta2)){
-            return 2;
-        }
-        else{
-            return 3;
-        }
+        int escolher(String [] escolhas){
+            String escolha = escaneador.nextLine();
+            if(escolha.equalsIgnoreCase(escolhas[0])){
+                return 0;
+            }
+            else if(escolha.equalsIgnoreCase(escolhas[1])){
+                return 1;
+            }
+            else{
+                return 3;
+            }
+
+    }  
+       
+}
         
 
-        }
+        
          
-}
+
