@@ -16,7 +16,7 @@ public class Capitulo {
         this.qtdfeliz = qtdfeliz;
     }
 
-    void mostrar(String texto, String[] escolhas, Personagem personagem ,  int qtdfeliz){ 
+    void mostrar(String texto, String[] escolhas, Personagem personagem){ 
         System.out.println(this.texto);
         if(escolhas != null){
             for(String str : escolhas ){
@@ -34,16 +34,13 @@ public class Capitulo {
 
         int escolher(String [] escolhas){
             String escolha = escaneador.nextLine();
-            if(escolha.equalsIgnoreCase(escolhas[0])){
-                return 0;
+            int valor = 0;
+            for(int i = 0; i < escolhas.length; i++){
+                if(escolhas[i].equalsIgnoreCase(escolha)){
+                    valor++;
+                }
             }
-            else if(escolha.equalsIgnoreCase(escolhas[1])){
-                return 1;
-            }
-            else{
-                return 3;
-            }
-
+            return valor;
     }  
        
 }

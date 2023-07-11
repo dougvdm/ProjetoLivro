@@ -26,7 +26,7 @@ public class Personagem {
         return feliz;
       }
       else{
-       System.out.println(this.nome+" mudou seu estado de felicidade");
+        System.out.println(this.nome +" mudou seu estado de felicidade");
         System.out.println("Sua nova felicidade é de "+ this.felicidade);
         return feliz;
       } 

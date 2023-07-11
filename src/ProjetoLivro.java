@@ -22,7 +22,7 @@ public class ProjetoLivro {
        String cap2 = "\ncapitulo 2\n\n"+
         "JP acaba descobrindo das segundas intenções de Deco e "+
          "\nacaba cortando os laços com ele" 
-        + "\ne depois ele desceu o cacete em deco, coitado";    
+        + "\ne depois ele desceu o cacete em deco, coitado\n";    
 
         //esc2cap1
         String cap3 = ( "\nCapítulo 3\n\n"+
@@ -59,7 +59,7 @@ public class ProjetoLivro {
 
 
         Scanner escaneador = new Scanner(System.in);
-        capitulo1.mostrar(cap1,escolhacap1,deco , -10); 
+        capitulo1.mostrar(cap1,escolhacap1,deco ); 
 
 
         int contador = 0;
@@ -68,25 +68,25 @@ public class ProjetoLivro {
 
             //primeiro final
             if (esc1 == 0){
-                capitulo2.mostrar(cap2,escolhanull, deco, -40);
+                capitulo2.mostrar(cap2,escolhanull, deco);
                 contador++;
             }
             
             else if (esc1 == 1){
-                capitulo3.mostrar(cap3,escolhacap3,deco ,+10 );
+                capitulo3.mostrar(cap3,escolhacap3,deco  );
                 int contador2 = 0;
 
                 while (contador2 == 0 && feliz == true){
                     int esc2 = capitulo3.escolher(escolhacap3);
                     //segundo final
                     if (esc2 == 0){
-                        capitulo4.mostrar(cap4, escolhanull, deco, -30);
+                        capitulo4.mostrar(cap4, escolhanull, deco);
                         contador++;
                         contador2++;
                     }
                     //terceiro final
                     else if(esc2 == 1){
-                        capitulo5.mostrar(cap5,escolhanull,deco, -20);
+                        capitulo5.mostrar(cap5,escolhanull,deco);
                         contador++;
                         contador2++;
                     }
