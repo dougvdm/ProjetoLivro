@@ -4,46 +4,53 @@ import java.util.Scanner;
 public class Capitulo {
     Scanner escaneador = new Scanner(System.in);
     String texto;
-    String[] escolhas;
+    Escolha[] escolhas;
     Personagem personagem;
     int qtdfeliz;
+   
 
-
-    public Capitulo(String texto, String[] escolhas, Personagem personagem, int qtdfeliz){
+    public Capitulo(String texto,Escolha[] escolhas, Personagem personagem, int qtdfeliz){
         this.texto = texto;
-        this.escolhas = escolhas;
         this.personagem = personagem;
         this.qtdfeliz = qtdfeliz;
+        this.escolhas = escolhas;
     }
 
-    void mostrar(String texto, String[] escolhas, Personagem personagem){ 
-        System.out.println(this.texto);
-        if(escolhas != null){
-            for(String str : escolhas ){
-                System.out.println(str);
-            
-            }  
-        }
+    public void mostrar(){
+         System.out.println(this.texto);
+        
+    
         if(qtdfeliz != 0){
             this.personagem.mudaFelicidade(qtdfeliz);
         }
-
-
+    
+    }
+         public void executar() {
+            mostrar();
+            escolher();
+         }
         
-       }
 
-        int escolher(String [] escolhas){
-            String escolha = escaneador.nextLine();
-            int valor = 0;
-            for(int i = 0; i < escolhas.length; i++){
-                if(escolhas[i].equalsIgnoreCase(escolha)){
-                    valor++;
-                }
-            }
-            return valor;
-    }  
+
+         public void escolher(){
+            boolean escolhaValida = true;
+            while (escolhaValida) {
+                String resposta = escaneador.nextLine();
+                for (Escolha escolha : escolhas) {
+                    if (resposta.equalsIgnoreCase(escolha.getTexto())) {
+                        escolhaValida = false;
+                        Capitulo proximoCapitulo = escolha.getProximo();
+                        proximoCapitulo.executar();
+                        return;
+            }  
        
+          }
+          System.out.println("Você digitou errado, tente novamente!");
+       }
+    }
+           
 }
+
         
 
         
