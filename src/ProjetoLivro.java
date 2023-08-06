@@ -12,7 +12,7 @@ public class ProjetoLivro {
         String cap1 ="Capitulo 1\n"+
        "Deco, também conhecido como o último romantico do mundo é um rapaz que está" + 
        "\nterrivelmente apaixonado por sua amiga de infância chamada Laura, porém pela infelicidade dele," + 
-       "\nela já está comprometida com João Pedro, vulgo JP, que é seu atual namorado, o que ele deve fazer? \n\nse declarar\nnao se declarar";
+       "\nela já está comprometida com João Pedro, vulgo JP, que é seu atual namorado, o que ele deve fazer? \n\nse declarar\nnao se declarar\n";
         String escolhacap1 = "se declarar";
         String escolha2cap1 = "nao se declarar";
         
@@ -21,7 +21,7 @@ public class ProjetoLivro {
        String cap2 = "\ncapitulo 2\n\n"+
         "JP acaba descobrindo das segundas intenções de Deco e "+
          "\nacaba cortando os laços com ele" 
-        + "\ne depois ele desceu o cacete em deco, coitado\nFIM";    
+        + "\ne depois ele desceu o cacete em deco, coitado\nFIM\n";    
 
         //esc2cap1
         String cap3 = ( "\nCapítulo 3\n\n"+
@@ -30,7 +30,7 @@ public class ProjetoLivro {
         "\naté que um belo dia ele conheceu Camilinha, Uma menina meiga do seu cursinho"+
         "\nela bateu o olho em deco e se apaixonou pelo magrelo, paixão a primeira vista."+
         "\nDeco, todo bestinha do jeito que é, ficou enrolando pra ter alguma iniciativa com camilinha"+
-        "\nporém, depois de umas 2 semanas ele teve iniciativa pra ficar com ela, o que ele deve fazer? \n\npedir\nnao pedir");
+        "\nporém, depois de umas 2 semanas ele teve iniciativa pra ficar com ela, o que ele deve fazer? \n\npedir\nnao pedir\n");
     
         String escolhacap3 = "pedir";
         String escolha2cap3 = "nao pedir";
@@ -40,13 +40,13 @@ public class ProjetoLivro {
          String cap4 ="\nCapítulo 4\n\n"+
         "Deco decide pedir camilinha em namoro porém, já passou muito tempo"
         +"\ne ela já está pensando em conhecer novas pessoas e acaba recusando seu pedido."+
-        "\nDeco, frustado com sua resposta acabou por bater sua cabeça na pia e assim, terminar no hospital.\n FIM";
+        "\nDeco, frustado com sua resposta acabou por bater sua cabeça na pia e assim, terminar no hospital.\nFIM\n";
 
 
         //esc2cap3
         String cap5 ="Capítulo 5\n\n" +
         "Deco decide não pedir camilinha em namoro"+
-        "\nrestando assim apenas a sua humilde academia pra vê se deixa de ser frango\n FIM";
+        "\nrestando assim apenas a sua humilde academia pra vê se deixa de ser frango\nFIM\n ";
 
         Escolha[] escolhanull = new Escolha[0];
         Escolha[] escolhascap1 = new Escolha[2];
