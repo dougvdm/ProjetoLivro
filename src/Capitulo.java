@@ -2,11 +2,11 @@ import java.util.Scanner;
 
 
 public class Capitulo {
-    Scanner escaneador = new Scanner(System.in);
-    String texto;
-    Escolha[] escolhas;
-    Personagem personagem;
-    int qtdfeliz;
+    private Scanner escaneador = new Scanner(System.in);
+    private String texto;
+    private Escolha[] escolhas;
+    private Personagem personagem;
+    private int qtdfeliz;
    
 
     public Capitulo(String texto,Escolha[] escolhas, Personagem personagem, int qtdfeliz){
@@ -48,7 +48,48 @@ public class Capitulo {
           System.out.println("Você digitou errado, tente novamente!");
        }
     }
-           
+
+    public Scanner getEscaneador() {
+        return escaneador;
+    }
+
+    public void setEscaneador(Scanner escaneador) {
+        this.escaneador = escaneador;
+    }
+
+   
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public Escolha[] getEscolhas() {
+        return escolhas;
+    }
+
+
+    public void setEscolhas(Escolha[] escolhas) {
+        this.escolhas = escolhas;
+    }
+
+   
+    public Personagem getPersonagem() {
+        return personagem;
+    }
+
+  
+    public void setPersonagem(Personagem personagem) {
+        this.personagem = personagem;
+    }
+
+    public int getQtdfeliz() {
+        return qtdfeliz;
+    }
+
+
+    public void setQtdfeliz(int qtdfeliz) {
+        this.qtdfeliz = qtdfeliz;
+    }
+
 }
 
         
