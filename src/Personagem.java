@@ -1,6 +1,6 @@
 public class Personagem {
-    String nome;
-    int felicidade;
+    private String nome;
+    private int felicidade;
     
     
    public Personagem(String nome, int felicidade){
@@ -14,9 +14,9 @@ public class Personagem {
 
       if(felicidade <= 0){
         this.felicidade = 0;
-        feliz = false;
-        System.out.println("sua nova felicidade é: "+ this.felicidade);
+        System.out.println("sua felicidade é: "+ this.felicidade);
         System.out.println(this.nome + " morreu de tristeza");
+        feliz = false;
         return feliz;
       }
       else if(felicidade > 50){
@@ -32,4 +32,24 @@ public class Personagem {
       } 
      
     }
-  }
+  
+ 
+    public String getNome() {
+        return nome;
+    }
+
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getFelicidade() {
+        return felicidade;
+    }
+
+   
+    public void setFelicidade(int felicidade) {
+        this.felicidade = felicidade;
+    }
+
+}
