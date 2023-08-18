@@ -1,19 +1,20 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 
 public class Capitulo {
     private Scanner escaneador = new Scanner(System.in);
     private String texto;
-    private Escolha[] escolhas;
+    private ArrayList<Escolha> escolhas;
     private Personagem personagem;
     private int qtdfeliz;
    
 
-    public Capitulo(String texto,Escolha[] escolhas, Personagem personagem, int qtdfeliz){
+    public Capitulo(String texto,ArrayList<Escolha> escolhas, Personagem personagem, int qtdfeliz){
         this.texto = texto;
         this.personagem = personagem;
         this.qtdfeliz = qtdfeliz;
-        this.escolhas = escolhas;
+        this.escolhas = new ArrayList<>();
     }
 
     public void mostrar(){
@@ -62,15 +63,13 @@ public class Capitulo {
         this.texto = texto;
     }
 
-    public Escolha[] getEscolhas() {
+    public ArrayList<Escolha> getEscolhas() {
         return escolhas;
     }
 
-
-    public void setEscolhas(Escolha[] escolhas) {
-        this.escolhas = escolhas;
-    }
-
+    public void addescolhas(Escolha escolha){
+        escolhas.add(escolha);
+    } 
    
     public Personagem getPersonagem() {
         return personagem;

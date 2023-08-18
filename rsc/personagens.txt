@@ -1,0 +1,9 @@
+PERSONAGEM
+principal
+Deco
+50
+
+PERSONAGEM
+secundaria
+Camilinha
+50
