@@ -11,7 +11,6 @@ public class LeitorArquivos {
         File arquivo = new File(caminho);
         try{
             Scanner leitor = new Scanner(arquivo,"UTF-8");
-            System.out.println("Lendo os personagens...");
             while (leitor.hasNextLine()){
                 String linha = leitor.nextLine();
                 if (linha.equalsIgnoreCase("PERSONAGEM")){
@@ -38,7 +37,6 @@ public class LeitorArquivos {
         File arquivocap = new File(caminho);
         try{
             Scanner leitor = new Scanner(arquivocap,"UTF-8");
-            System.out.println("Lendo os Capítulos...");
             while(leitor.hasNextLine()){
                 String linha = leitor.nextLine();
                 if(linha.equalsIgnoreCase("CAPITULO")){
