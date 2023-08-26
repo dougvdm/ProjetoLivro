@@ -1,6 +1,6 @@
 public class Escolha {
-    private String texto;
-    private Capitulo proximo;
+    protected String texto;
+    protected Capitulo proximo;
 
     public Escolha(String texto, Capitulo proximo){
         this.texto = texto;

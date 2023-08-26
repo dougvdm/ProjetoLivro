@@ -1,13 +1,14 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class Capitulo {
-    private Scanner escaneador = new Scanner(System.in);
-    private String texto;
-    private ArrayList<Escolha> escolhas;
-    private Personagem personagem;
-    private int qtdfeliz;
+    protected Scanner escaneador = new Scanner(System.in);
+    protected String texto;
+    protected ArrayList<Escolha> escolhas;
+    protected Personagem personagem;
+    protected int qtdfeliz;
    
 
     public Capitulo(String texto,ArrayList<Escolha> escolhas, Personagem personagem, int qtdfeliz){
@@ -49,6 +50,29 @@ public class Capitulo {
           System.out.println("Você digitou errado, tente novamente!");
        }
     }
+
+
+     protected void LerCapitulo(HashMap<String, Personagem> personagens, Scanner leitor){
+        leitor.nextLine();
+        String personagem = leitor.nextLine();
+        this.personagem = personagens.get(personagem);
+        leitor.nextLine();
+        String linha = leitor.nextLine();
+        this.texto = "";
+        while(!linha.equalsIgnoreCase("principal")){
+            this.texto += linha + "\n";
+            linha = leitor.nextLine();
+        }
+
+     }
+
+     public Capitulo (Scanner escaneador, HashMap<String, Personagem> personagens, Scanner leitor){
+        this.escolhas = new ArrayList<Escolha>();
+        this.escaneador = escaneador;
+        this.LerCapitulo(personagens, leitor);
+
+    }
+
 
     public Scanner getEscaneador() {
         return escaneador;

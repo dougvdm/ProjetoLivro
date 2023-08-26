@@ -39,12 +39,25 @@ public class LeitorArquivos {
             Scanner leitor = new Scanner(arquivocap,"UTF-8");
             while(leitor.hasNextLine()){
                 String linha = leitor.nextLine();
-                if(linha.equalsIgnoreCase("CAPITULO")){
+                if(linha.equalsIgnoreCase("CAPITULO")||linha.equalsIgnoreCase("CAPITULOIMAGEM")){
                     ArrayList<Escolha> escolha = new ArrayList<Escolha>();
                     String origem = leitor.nextLine();
                     String texto = leitor.nextLine();
                     String refpersonagem = leitor.nextLine();
                     int mudanca = Integer.parseInt(leitor.nextLine());
+                    String linha2 = leitor.nextLine();
+                    if(linha2.equalsIgnoreCase("ComecoDaImagem")){
+                        String imagem = "";
+                        while(!linha.equalsIgnoreCase("FimDaImagem")){
+                            linha = leitor.nextLine();
+                            if (linha.equalsIgnoreCase("FimDaImagem")){
+                                break;
+                            }
+                            imagem += linha + "\n";
+                        }
+                        ImagemDoCapitulo capitulo = new ImagemDoCapitulo(texto, escolha,persongens.get(refpersonagem), mudanca, imagem);
+                        capitulos.put(origem,capitulo);
+                    }   
                     Capitulo capitulo = new Capitulo(texto,escolha,persongens.get(refpersonagem),mudanca );
                     capitulos.put(origem,capitulo);
                 }
