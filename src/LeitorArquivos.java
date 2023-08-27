@@ -57,9 +57,11 @@ public class LeitorArquivos {
                         }
                         ImagemDoCapitulo capitulo = new ImagemDoCapitulo(texto, escolha,persongens.get(refpersonagem), mudanca, imagem);
                         capitulos.put(origem,capitulo);
-                    }   
-                    Capitulo capitulo = new Capitulo(texto,escolha,persongens.get(refpersonagem),mudanca );
-                    capitulos.put(origem,capitulo);
+                    }
+                    else{
+                        Capitulo capitulo = new Capitulo(texto,escolha,persongens.get(refpersonagem),mudanca );
+                        capitulos.put(origem,capitulo);
+                    }
                 }
                 else if(linha.equalsIgnoreCase("ESCOLHA")){
                     String origem = leitor.nextLine();
